@@ -206,8 +206,7 @@ p {font-family: 'pretendard', sans-serif;
         color: white;
         font-size: 70px;
         font-weight: 700;
-
-        /* 💥 핵심: 빛나는 효과 */
+          
         box-shadow:
         0 0 10px rgba(255,255,255,0.8),
         0 0 20px rgba(255,255,255,0.6),
@@ -410,7 +409,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
-/* 🔥 타이포 인터랙션 (안 깨지는 버전) */
+
 const spans = document.querySelectorAll(".title span");
 
 document.addEventListener("mousemove", (e) => {
@@ -425,12 +424,12 @@ document.addEventListener("mousemove", (e) => {
 
     const dist = Math.sqrt(dx * dx + dy * dy);
 
-    const max = 250; /* 🔥 범위 줄임 */
+    const max = 250;
 
     if (dist < max) {
       const power = (max - dist) / max;
 
-  const maxMove = 100;  // 🔥 기존 20 → 60
+  const maxMove = 100;
 
 const moveX = Math.max(-maxMove, Math.min(maxMove, dx * power * 7));
 const moveY = Math.max(-maxMove, Math.min(maxMove, dy * power * 7));
@@ -456,7 +455,7 @@ document.addEventListener("mousemove", (e) => {
   const dx = e.clientX - centerX;
   const dy = e.clientY - centerY;
 
-  // 🔥 여기 숫자가 핵심 (크게 하면 더 적극적)
+
   const moveX = dx * 0.3;
   const moveY = dy * 0.3;
 
